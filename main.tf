@@ -1,14 +1,5 @@
-variable "command" {
-  description = "The command to run"
-  default     = "echo Hello World!"
-}
-
-resource "null_resource" "executor" {
-  provisioner "local-exec" {
-    command = var.command
+resource "random_pet" "run_from_vcs" {
+  keepers = {
+    timestamp = timestamp()
   }
-}
-
-output "command" {
-  value = var.command
 }
