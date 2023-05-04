@@ -1,0 +1,34 @@
+name: Sync repos
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    if: github.repository == 'scalr-automation/terraform-scalr-flat'
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v3
+        with:
+          ref: main
+      - name: Set up Git
+        run: |
+          git config --global user.name "scalr-autotester"
+          git config --global user.email "scalr-autotester@scalr.com"
+      - name: Sync repositories
+        run: |
+          git config --unset-all http.https://github.com/.extraheader
+          git remote add repo1 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror1.git
+          git push --force repo1 main --tags
+          git remote add repo2 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror2.git
+          git push --force repo2 main --tags
+          git remote add repo3 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror3.git
+          git push --force repo3 main --tags
+          git remote add repo4 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror4.git
+          git push --force repo4 main --tags
+          git remote add repo5 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror5.git
+          git push --force repo5 main --tags
