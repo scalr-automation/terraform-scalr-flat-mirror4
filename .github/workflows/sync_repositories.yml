@@ -20,15 +20,15 @@ jobs:
           git config --unset-all http.https://github.com/.extraheader
       - name: Sync repositories
         run: |
-          git remote add repo1 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror1.git
+          git remote add repo1 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror1.git
           git push --force repo1 main --follow-tags
-          git remote add repo2 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror2.git
+          git remote add repo2 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror2.git
           git push --force repo2 main --follow-tags
-          git remote add repo3 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror3.git
+          git remote add repo3 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror3.git
           git push --force repo3 main --follow-tags
-          git remote add repo4 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror4.git
+          git remote add repo4 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror4.git
           git push --force repo4 main --follow-tags
-          git remote add repo5 https://scalr-autotester13:${{ secrets.GH_PAT_13 }}@github.com/scalr-automation/terraform-scalr-flat-mirror5.git
+          git remote add repo5 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror5.git
           git push --force repo5 main --follow-tags
           git remote add gh-ee-repo https://AKramarenko:${{ secrets.GH_EE_TOKEN }}@github-ee.main.scalr.dev/scalr-automation/terraform-scalr-flat.git
           git push --force gh-ee-repo main --follow-tags
