@@ -1,0 +1,1 @@
+resource "terraform_data" "head_resource" {}
