@@ -31,5 +31,15 @@ jobs:
           git push --force repo4 main --follow-tags
           git remote add repo5 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror5.git
           git push --force repo5 main --follow-tags
+          git remote add repo6 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror6.git
+          git push --force repo6 main --follow-tags
+          git remote add repo7 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror7.git
+          git push --force repo7 main --follow-tags
+          git remote add repo8 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror8.git
+          git push --force repo8 main --follow-tags
+          git remote add repo9 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror9.git
+          git push --force repo9 main --follow-tags
+          git remote add repo10 https://scalr-autotester13:${{ secrets.GH_PAT_13_2 }}@github.com/scalr-automation/terraform-scalr-flat-mirror10.git
+          git push --force repo10 main --follow-tags
           git remote add gh-ee-repo https://AKramarenko:${{ secrets.GH_EE_TOKEN }}@github-ee.main.scalr.dev/scalr-automation/terraform-scalr-flat.git
           git push --force gh-ee-repo main --follow-tags
